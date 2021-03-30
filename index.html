@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Feedback Page </title>
+    <style>
+        table{
+            border: 2px solid black ;
+            margin: auto;
+        }
+        table th{
+            padding: 20px;
+            width: 20px;
+        }
+        #submit-style-button input{
+            background-color: rgb(11, 183, 206);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: cursive;
+            text-transform: uppercase;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="data.php" method="POST">
+        <table>
+            <!-- scratch row -->
+            <tr>
+                <th colspan="2">Student Feedback Form!</th>
+            </tr>
+            <!-- row 0 -->
+            <tr>
+                <th>Name</th>
+                <th><input type="text" name="name" placeholder="Enter your Name" required></th>
+            </tr>
+            <!-- row 1 -->
+            <tr>
+                <th>Roll No</th>
+                <th><input type="number" name="rollno" placeholder="Enter your Roll Number" required></th>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+                <th>Branch</th>
+                <th><select name="branch" style="width: 176px;" required="true">
+                    <option>--select--</option>
+                    <option value="cse">CSE</option>
+                    <option value="me">Mechnical</option>
+                    <option value="fts">Fire Safty</option>
+                    <option value="ee">Electrical</option>
+                </select></th>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+                <th>Bus Problem </th>
+                <th name="bus-problem">
+                    YES<input type="radio" name="bus-problem" required>
+                    NO<input type="radio" name="bus-problem" required>
+                </th>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+                <th>Lecture Problem</th>
+                <th name="lecture-problem">
+                    YES<input type="radio" name="lecture-problem" required>
+                    NO<input type="radio" name="lecture-problem" required>
+                </th>
+            </tr>
+            <!-- row 5 -->
+            <tr>
+                <th>Canteen Problem</th>
+                <th name="canteen-problem">
+                    YES<input type="radio" name="canteen-problem" required>
+                    NO<input type="radio" name="canteen-problem" required>
+                </th>
+            </tr>
+            <!-- row 5 -->
+            <tr>
+                <th id="submit-style-button"><input type="submit" required></th>
+                <th id="submit-style-button"><input type="reset" required></th>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
